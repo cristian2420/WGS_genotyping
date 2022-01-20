@@ -1,0 +1,196 @@
+{
+    "__default__" :
+    {
+        "walltime" : "walltime=18:00:00",
+        "cores" : "nodes=1:ppn=4",
+        "memory" : "mem=60GB",
+        "output" : "{rule}.{wildcards}.out",
+        "error" : "{rule}.{wildcards}.err"
+    },
+    "eval_reseq" :
+    {
+        "walltime" : "walltime=16:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=40GB"
+    },
+    "bwa_mapping" :
+    {
+        "walltime" : "walltime=120:00:00",
+        "cores" : "nodes=1:ppn=2",
+        "memory" : "mem=80GB"
+    },
+    "sortbam" :
+    {
+        "walltime" : "walltime=40:00:00",
+        "cores" : "nodes=1:ppn=2",
+        "memory" : "mem=40GB"
+    },
+    "markduplicates":
+    {
+        "walltime" : "walltime=24:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=40GB"
+    },
+    "samstats" :
+    {
+        "walltime" : "walltime=12:00:00",
+        "cores" : "nodes=1:ppn=2",
+        "memory" : "mem=30GB"
+    },
+    "collectMetrics" :
+    {
+        "walltime" : "walltime=12:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=30GB"
+    },
+    "index_bam" :
+    {
+        "walltime" : "walltime=10:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=30GB"
+    },
+    "baserecal" :
+    {
+        "walltime" : "walltime=18:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=40GB"
+    },
+    "apply_baserecal" :
+    {
+        "walltime" : "walltime=18:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=40GB"
+    },
+    "bamMAQfilter" :
+    {
+        "walltime" : "walltime=18:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=40GB"
+    },
+    "haplotypecaller" :
+    {
+        "walltime" : "walltime=180:00:00",
+        "cores" : "nodes=1:ppn=2",
+        "memory" : "mem=20GB"
+    },
+    "genomicsDBImport" :
+    {
+        "walltime" : "walltime=216:00:00",
+        "cores" : "nodes=1:ppn=4",
+        "memory" : "mem=20GB"
+    },
+    "subset_genome":
+    {
+        "walltime" : "walltime=00:05:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=5GB"
+    },
+    "genotypeGVCFs":
+    {
+        "walltime" : "walltime=100:00:00",
+        "cores" : "nodes=1:ppn=2",
+        "memory" : "mem=20GB"
+    },
+    "merge_VCF":
+    {
+        "walltime" : "walltime=24:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=80GB"
+    },
+    "multi2biallelic" :
+    {
+        "walltime" : "walltime=14:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=80GB"
+    },
+    "biallelic_index":
+    {
+        "walltime" : "walltime=10:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=30GB"
+    },
+    "VariantRecalibrator_SNP":
+    {
+        "walltime" : "walltime=18:00:00",
+        "cores" : "nodes=1:ppn=2",
+        "memory" : "mem=30GB"
+    },
+    "VariantRecalibrator_Indel":
+    {
+        "walltime" : "walltime=18:00:00",
+        "cores" : "nodes=1:ppn=2",
+        "memory" : "mem=30GB"
+    },
+    "ApplyVQSR_SNP":
+    {
+        "walltime" : "walltime=10:00:00",
+        "cores" : "nodes=1:ppn=2",
+        "memory" : "mem=20GB"
+    },
+    "ApplyVQSR_Indel":
+    {
+        "walltime" : "walltime=10:00:00",
+        "cores" : "nodes=1:ppn=2",
+        "memory" : "mem=20GB"
+    },
+    "genotypePosteriors":
+    {
+        "walltime" : "walltime=14:00:00",
+        "cores" : "nodes=1:ppn=2",
+        "memory" : "mem=30GB"
+    },
+    "addTag_ID":
+    {
+        "walltime" : "walltime=24:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=40GB"
+    },
+    "setup_missing":
+    {
+        "walltime" : "walltime=14:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=40GB"
+    },
+    "filter_notMAF":
+    {
+        "walltime" : "walltime=24:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=40GB"
+    },
+    "beagle_imputation" :
+    {
+        "walltime" : "walltime=6:00:00",
+        "cores" : "nodes=1:ppn=4",
+        "memory" : "mem=40GB"
+    },
+    "prephasing_eagle":
+    {
+        "walltime" : "walltime=6:00:00",
+        "cores" : "nodes=1:ppn=4",
+        "memory" : "mem=40GB"
+    },
+    "index_imputed":
+    {
+        "walltime" : "walltime=10:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=30GB"
+    },
+    "recalculate_MAF":
+    {
+        "walltime" : "walltime=24:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=40GB"
+    },
+    "filter_maf":
+    {
+        "walltime" : "walltime=24:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=40GB"
+    },
+    "merge_MAF_VCF":
+    {
+        "walltime" : "walltime=24:00:00",
+        "cores" : "nodes=1:ppn=1",
+        "memory" : "mem=80GB"
+    }
+}

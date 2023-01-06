@@ -1,0 +1,36 @@
+{
+    "app": {
+        "gatk": "/home/cgonzalez/tools/gatk-4.2.2.0/gatk",
+        "bwa": "/home/cgonzalez/tools/bwa/bwa",
+        "samtools": "/home/cgonzalez/tools/samtools-1.9/bin/samtools",
+        "bcftools": "/home/cgonzalez/tools/bcftools-1.9/bin/bcftools",
+        "picard": "/home/cgonzalez/tools/picard/picard.jar",
+        "eagle": "/home/cgonzalez/tools/Eagle_v2.4.1/eagle",
+        "beagle": "/home/cgonzalez/tools/beagle/beagle.28Jun21.220.jar"
+    },
+
+     "config": {
+        "fasta": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/GATK/resources_broad_hg38_v0_Homo_sapiens_assembly38.fasta",
+        "bed_genome": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/GATK/hg38.bed",
+        "workdir": "/mnt/beegfs/lts/cgonzalez/R24/wgs/DICE_Cancer_WGS/",
+        "run_file": "/mnt/beegfs/lts/cgonzalez/R24/wgs/DICE_Cancer_WGS/samples2run.txt",
+        "tmp_dir": "/home/cgonzalez/myscratch/R24/wgs/tmp/"
+    },
+
+    "gatk_files": {
+        "known_SNPs_1000_phase1": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/GATK/resources_broad_hg38_v0_1000G_phase1.snps.high_confidence.hg38.vcf",
+        "known_indels_from_mills_1000genomes": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/GATK/resources_broad_hg38_v0_Mills_and_1000G_gold_standard.indels.hg38.vcf",
+        "known_indels": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/GATK/resources_broad_hg38_v0_Homo_sapiens_assembly38.known_indels.vcf",
+        "know_snps": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/GATK/resources_broad_hg38_v0_Homo_sapiens_assembly38.dbsnp138.vcf",
+        "know_SNPs_HapMap": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/GATK/resources_broad_hg38_v0_hapmap_3.3.hg38.vcf",
+        "know_SNPs_OMNI": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/GATK/resources_broad_hg38_v0_1000G_omni2.5.hg38.vcf.gz",
+        "wgs_1000GP": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/1000GP/ALL.wgs.shapeit2_integrated_snvindels_v2a.GRCh38.27022019.sites.with_chr.vcf.gz"
+    },
+
+    "imputation_files": {
+        "input_1000GP_path": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/1000GP/",
+        "beagle_path": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/beagle_files/",
+        "eagle_path": "/mnt/BioAdHoc/Groups/vd-vijay/Cristian/genomes/complete_genome/hg38/eagle_files/"
+    }
+
+}

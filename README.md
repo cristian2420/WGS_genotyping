@@ -30,9 +30,9 @@ The following tools have to be installed on the server. Different versions of th
 
 Configuration file ```snake_conf.yaml``` has to be in the same folder as the ```Snakefile```. Make proper changes to it.
 
-* **"app":** Locations where the above listed apps were installed.
-* **"config":** General directories and parameters.
-* **"gatk_files":** GATK reference files downloaded from [https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0/](https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0/)
+* **app:** Locations where the above listed apps were installed.
+* **config:** General directories and parameters.
+* **gatk_files:** GATK reference files downloaded from [https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0/](https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0/)
 
 ### Running file:
 The running file needs to be specified on the ```snake_conf.yaml``` file as *run_file* in the *config* section. It has to list each sample name to be analyzed. If resequenced samples are provided those have to be name with the prefix *reseq* followed by the sample name. The pipeline will merge samples with this prefix with their respective original sample. Because of this the if *original* and *reseq* for a given sample needs to be listed in the running file.

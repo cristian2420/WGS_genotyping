@@ -87,10 +87,8 @@ rule eval_reseq:
 rule sortbam:
     input:
         bam_file = "2.Processed_data/{sample}/{sample}_bwa_mapping.bam"
-
     output:
         bam_sort = "2.Processed_data/{sample}/{sample}_bwa_mapping.sorted.bam"
-
     threads: 4
     shell:
         "{samtools_app} sort -@ {threads} {input.bam_file} -o {output.bam_sort}"
@@ -149,10 +147,6 @@ rule baserecal:
         hg38_indels = config['gatk_files']["known_indels"],
         hg38_snps = config['gatk_files']["know_snps"],
         snps_hapmap = config['gatk_files']["know_SNPs_HapMap"]
-    #run:
-    #    var_files = " ".join(["--known-sites " + file for file in params.know_sites])
-	#print(var_files)
-    #    shell("{gatk_app} BaseRecalibrator -I {input.bam_file} -R {input.fasta_ref} " + var_files + " -O {output.recal_table} ")
     shell:
         "{gatk_app} BaseRecalibrator -I {input.bam_file} -R {input.fasta_ref} "
         " --known-sites {params.snps_1000} --known-sites {params.indels_Mills} "
@@ -401,9 +395,9 @@ rule imputation:
         prefix = "3.Results/cohort_imputed_file"
     threads: 8
     shell:
-        "java -Xmx24g -jar {beagle_app} gt={input.vcf} nthreads={threads} out={params.preix}  impute=false"
+        "java -Xmx24g -jar {beagle_app} gt={input.vcf} nthreads={threads} out={params.prefix}  impute=false"
 
-rule maf_idx:
+rule index_imputed:
     input:
         "3.Results/cohort_imputed_file.vcf.gz"
     output:
@@ -411,7 +405,7 @@ rule maf_idx:
     shell:
         "tabix -p vcf {input} "
 
-rule maf_idx:
+rule tag_imputed:
     input:
         vcf = "3.Results/cohort_imputed_file.vcf.gz",
         idx = "3.Results/cohort_imputed_file.vcf.gz.tbi"
@@ -437,7 +431,7 @@ rule filter_maf:
     output:
         vcf = "3.Results/cohort_MAF_filtered.vcf.gz"
     params:
-        maf= 0.01
+        maf= config['config']['MAF']
     shell:
         "{bcftools_app} filter -i 'INFO/MAF > {params.maf}' -Oz -o {output.vcf} {input.vcf} "
 

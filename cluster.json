@@ -10,7 +10,7 @@
     "eval_reseq" :
     {
         "walltime" : "walltime=16:00:00",
-        "cores" : "nodes=1:ppn=1",
+        "cores" : "nodes=1:ppn=2",
         "memory" : "mem=40GB"
     },
     "bwa_mapping" :
@@ -157,27 +157,21 @@
         "cores" : "nodes=1:ppn=1",
         "memory" : "mem=40GB"
     },
-    "beagle_imputation" :
+    "imputation" :
     {
-        "walltime" : "walltime=6:00:00",
+        "walltime" : "walltime=10:00:00",
         "cores" : "nodes=1:ppn=4",
-        "memory" : "mem=40GB"
-    },
-    "prephasing_eagle":
-    {
-        "walltime" : "walltime=6:00:00",
-        "cores" : "nodes=1:ppn=4",
-        "memory" : "mem=40GB"
+        "memory" : "mem=35GB"
     },
     "index_imputed":
     {
-        "walltime" : "walltime=10:00:00",
+        "walltime" : "walltime=01:00:00",
         "cores" : "nodes=1:ppn=1",
         "memory" : "mem=30GB"
     },
-    "recalculate_MAF":
+    "tag_imputed":
     {
-        "walltime" : "walltime=24:00:00",
+        "walltime" : "walltime=05:00:00",
         "cores" : "nodes=1:ppn=1",
         "memory" : "mem=40GB"
     },
@@ -186,11 +180,5 @@
         "walltime" : "walltime=24:00:00",
         "cores" : "nodes=1:ppn=1",
         "memory" : "mem=40GB"
-    },
-    "merge_MAF_VCF":
-    {
-        "walltime" : "walltime=24:00:00",
-        "cores" : "nodes=1:ppn=1",
-        "memory" : "mem=80GB"
     }
 }

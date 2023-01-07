@@ -65,7 +65,9 @@ working_directory/
 
 Fastq files names has to have the sample name followed by *_R1.fastq.gz* or *_R2.fastq.gz* suffixes.
  
-### Example
+### NOTES
+
+The ```bin/``` folder needs to be copy to the working directory.
 
 The ```pbs_submit.sh``` file shows and example of how the pipeline was run.
 

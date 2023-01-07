@@ -47,8 +47,25 @@ __E.g.:__
 |reseqsample2|
 |&nbsp;|
 
+### FASTQ files:
 
-  
+For running the pipeline fastq files needs to be saved in the working directory specified in the ```snake_conf.yaml``` file in the following path:
+
+```
+working_directory/
+└── 1.Inputs
+    └── fastq_input/
+       ├── sample1_R1.fastq.gz
+       ├── sample1_R2.fastq.gz
+       ├── sample2_R1.fastq.gz
+       ├── sample2_R2.fastq.gz
+       ├── reseqsample1_R1.fastq.gz
+       └── reseqsample1_R2.fastq.gz
+```
+
+Fastq files names has to have the sample name followed by *_R1.fastq.gz* or *_R2.fastq.gz* suffixes.
  
+### Example
 
+The ```pbs_submit.sh``` file shows and example of how the pipeline was run.
 

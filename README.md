@@ -71,3 +71,17 @@ The ```bin/``` folder needs to be copy to the working directory.
 
 The ```pbs_submit.sh``` file shows and example of how the pipeline was run.
 
+Please cite the following manuscript if you are using this repository:
+
+
+## Autor
+
+* Cristian Gonzalez-Colin (cgonzalez@lji.org) 
+
+Vijayanand Lab.  
+Division of Vaccine Discovery La Jolla Institute for Immunology La Jolla, CA 92037, USA
+
+
+## Contact
+
+Please email Cristian Gonzalez-Colin (cgonzalez@lji.org)  and/or Vijayanand Pandurangan (vijay@lji.org).
